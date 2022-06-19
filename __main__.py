@@ -53,7 +53,7 @@ def aki_play_cmd_handler(update: Update, context: CallbackContext) -> None:
     user_id = update.effective_user.id
     msg = update.message.reply_photo(
         photo=open('aki_pics/aki_01.png', 'rb'),
-        caption="Loading..."
+        caption="Yüklenir..."
     )
     updateTotalGuess(user_id, total_guess=1)
     q = aki.start_game(language=getLanguage(user_id), child_mode=getChildMode(user_id))
